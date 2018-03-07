@@ -1,0 +1,2 @@
+# Glickchain
+Simple blockchain implementation
