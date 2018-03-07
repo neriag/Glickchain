@@ -19,7 +19,7 @@ export default class Blockchain{
     }
 
     IsValid(){
-        for (i = 0; i < this.Blocks.length; i++){
+        for (let i = 0; i < this.Blocks.length; i++){
             
             if (i !== 0 && this.Blocks[i].prevHash != this.Blocks[i-1].Hash){
                 return false; 
