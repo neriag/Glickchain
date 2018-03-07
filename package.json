@@ -1,0 +1,24 @@
+{
+  "name": "glickchain",
+  "version": "1.0.0",
+  "description": "Simple blockchain implementation",
+  "main": "index.js",
+  "scripts": {
+    "start": "babel-node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/neriag/Glickchain.git"
+  },
+  "author": "Neria Glick",
+  "bugs": {
+    "url": "https://github.com/neriag/Glickchain/issues"
+  },
+  "homepage": "https://github.com/neriag/Glickchain#readme",
+  "dependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.3",
+    "babel-preset-latest": "^6.24.1"
+  }
+}
