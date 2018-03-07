@@ -1,18 +1,21 @@
 import Sha256 from './Sha256';
 
 export default class Block {
-    constructor(blockNumber, data, nonce) {
+    constructor(blockNumber, data, nonce, prevHash) {
         this.BlockNumber = blockNumber || 0;
         this.Data = data || "";
         this.Nonce = nonce || 0;
+        this.PrevHash = prevHash || "";
+        this.RefreshHash();
     }
 
-    get Hash(){
-        let toHash = this.BlockNumber.toString() + this.Nonce.toString() + this.Data;
-        return Sha256(toHash);
+    RefreshHash(){
+        let toHash = this.BlockNumber.toString() + this.Nonce.toString() + this.Data + this.PrevHash;
+        this.Hash = Sha256(toHash);
     }
 
     IsValid(){
+        this.RefreshHash();
         return this.Hash.startsWith("0000");
     }
 

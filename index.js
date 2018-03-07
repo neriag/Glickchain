@@ -1,5 +1,10 @@
-import Block from "./utils/Block"
+import Blockchain from "./utils/Blockchain"
 
-let block = new Block(1, "We all live in a yellow submarine");
-block.Mine();
-console.log(block.Nonce);
+let chain = new Blockchain();
+chain.AdBlock("Neriag");
+chain.AdBlock("Is");
+chain.AdBlock("A");
+chain.AdBlock("Good");
+chain.AdBlock("Man");
+
+chain.Blocks.forEach((b) => console.log(b.Nonce));
