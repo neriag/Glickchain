@@ -1,7 +1,5 @@
-import crypto from 'crypto';
+import Block from "./utils/Block"
 
-function Sha256(data) {
-    return crypto.createHash('sha256').update(data).digest('hex');
-}
-
-console.log(Sha256("Neriag"));
+let block = new Block(1, "We all live in a yellow submarine");
+block.Mine();
+console.log(block.Nonce);
